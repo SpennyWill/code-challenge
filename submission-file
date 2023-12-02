@@ -1,0 +1,45 @@
+const findSum = function(array) {
+    const sum = array.reduce((a,b) => {
+        return a + b; 
+    },0); 
+    return sum; 
+};
+
+const findFrequency = function(array) {
+   const duplicates = {}; 
+        for (const value of array) {
+            duplicates[value] = (duplicates[value] || 0) + 1; 
+        }
+            let dupValues = Object.keys(duplicates); 
+                let mostKey = dupValues.reduce((a,b) => {
+                        return duplicates[a] > duplicates[b] ? a : b; 
+                } );
+                let leastKey = dupValues.reduce((a,b) => {
+                    return duplicates[a] < duplicates[b] ? a : b;
+                } );
+
+        
+    return {most: mostKey, least: leastKey};
+};
+
+const isPalindrome = function(str) {
+    const lowerCase = word.toLowerCase();
+    const reversedWord = lowerCase.split('').reverse().join(''); 
+    return (reversedWord === lowerCase); 
+    };
+
+const largestPair = function(array) {
+    const products = [];
+    for (let i = 0; i < numbers.length - 1; i++) {
+        products.push(numbers[i] * numbers[i + 1])
+    }
+    return Math.max(...products);; 
+ 
+ };
+
+
+const removeParenth = function(str) {
+  const extract = /\([^)]+\)/;
+    const result = target.replace(extract, ''); 
+    return result; 
+};
